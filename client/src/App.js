@@ -163,12 +163,12 @@ const App = () => {
                                 {
                                     data.map((item,index) => {
                                         return (
-                                            <tr>
-                                                <td>{index+1}</td>
-                                                <td>{item.name}</td>
-                                                <td>{item.email}</td>
-                                                <td onClick={() => updateUser(item._id, item.name, item.email)}><FontAwesomeIcon icon={faPencilAlt} className="updateIcon"  /></td>
-                                                <td onClick={()=> deleteUser(item._id)} ><FontAwesomeIcon icon={faTrash} className="deleteIcon" /></td>
+                                            <tr key={index}>
+                                                <td data-column="S.NO" >{index+1}</td>
+                                                <td data-column="Name">{item.name}</td>
+                                                <td data-column="Email">{item.email}</td>
+                                                <td data-column="Update" onClick={() => updateUser(item._id, item.name, item.email)}><FontAwesomeIcon icon={faPencilAlt} className="updateIcon"  /></td>
+                                                <td data-column="Delete" onClick={()=> deleteUser(item._id)} ><FontAwesomeIcon icon={faTrash} className="deleteIcon" /></td>
                                             </tr>
                                         )
                                     })
