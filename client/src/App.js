@@ -29,7 +29,7 @@ const App = () => {
     const submitHandler = (e) => {
         e.preventDefault();
 
-        Axios.post('http://localhost:5000/api/user/new', {
+        Axios.post('/api/user/new', {
             name: name,
             email: email
         })
@@ -45,7 +45,7 @@ const App = () => {
 
 
     useEffect(() => {
-        Axios.get('http://localhost:5000/api/user')
+        Axios.get('/api/user')
         .then((response) => {
             setData(response.data.data);
         })
@@ -62,7 +62,7 @@ const App = () => {
 
     const deleteUser = (id) => {
         
-        Axios.delete(`http://localhost:5000/api/user/delete/${id}`)
+        Axios.delete(`/api/user/delete/${id}`)
         .then(() => {
             setData(data.filter((val) => {
                 return val._id !== id;
@@ -79,7 +79,7 @@ const App = () => {
 
         e.preventDefault();
         
-        Axios.patch('http://localhost:5000/api/user/update',{
+        Axios.patch('/api/user/update',{
             "_id":userId,
             "name":name,
             "email":email
