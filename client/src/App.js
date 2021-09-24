@@ -167,8 +167,8 @@ const App = () => {
                                                 <td data-column="S.NO" >{index+1}</td>
                                                 <td data-column="Name">{item.name}</td>
                                                 <td data-column="Email">{item.email}</td>
-                                                <td data-column="Update" onClick={() => updateUser(item._id, item.name, item.email)}><FontAwesomeIcon icon={faPencilAlt} className="updateIcon"  /></td>
-                                                <td data-column="Delete" onClick={()=> deleteUser(item._id)} ><FontAwesomeIcon icon={faTrash} className="deleteIcon" /></td>
+                                                <td data-column="Update"><button onClick={() => updateUser(item._id, item.name, item.email)}><FontAwesomeIcon icon={faPencilAlt} className="updateIcon"/></button></td>
+                                                <td data-column="Delete"><button onClick={()=> deleteUser(item._id)}><FontAwesomeIcon icon={faTrash} className="deleteIcon" /></button></td>
                                             </tr>
                                         )
                                     })
