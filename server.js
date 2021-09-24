@@ -5,7 +5,6 @@ const morgan = require('morgan');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const path = require('path');
-const bodyParser = require('body-parser');
 
 // dotenv 
 dotenv.config({ path: './config/config.env' });
@@ -24,16 +23,6 @@ const app = express();
 //MIDDLEWARE
 app.use(cors())
 
-app.use(function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', 'http://localhost:5000');
-    res.header(
-      'Access-Control-Allow-Headers',
-      'Origin, X-Requested-With, Content-Type, Accept'
-    );
-    next();
-  });
-
-app.use(bodyParser.json())
 
 // Allow to json
 app.use(express.json());
