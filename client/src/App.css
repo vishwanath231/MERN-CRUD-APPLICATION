@@ -11,10 +11,11 @@ body {
   padding: 0 15px;
 }
 
-header{
+header {
   text-align: center;
 }
-header > p{
+
+header>p {
   font-size: 2rem;
   font-weight: 600;
 }
@@ -107,7 +108,7 @@ header > p{
 
 
 
-.record__container{
+.record__container {
   width: 100%;
 }
 
@@ -202,15 +203,22 @@ td a {
   }
 }
 
+td button {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
 
 .updateIcon,
 .deleteIcon {
   font-size: 1rem;
-  cursor: pointer;
 }
+
 .updateIcon {
   color: cornflowerblue;
 }
+
 .deleteIcon {
   color: crimson;
 }
