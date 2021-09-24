@@ -7,7 +7,7 @@ body {
 
 .container {
   max-width: 1140px;
-  margin: 3rem auto;
+  margin: 1.5rem auto 2rem auto;
   padding: 0 15px;
 }
 
@@ -111,39 +111,95 @@ header > p{
   width: 100%;
 }
 
-
-
 table {
   width: 100%;
   border-collapse: collapse;
+}
 
+tr:nth-of-type(even) {
+  background: rgb(240, 240, 240);
+}
+
+th {
+  background: lightcoral;
+  color: white;
 }
 
 td,
 th {
   padding: 10px;
   text-align: center;
-  font-size: .9rem;
-  font-weight: 500;
   border: 1px solid #ddd;
-}
-
-tr:nth-child(even) {
-  background-color: rgb(212, 212, 212);
-}
-
-th {
-  background-color: lightcoral;
-}
-
-td button {
-  border: none;
-  outline: none;
-  font-size: .9rem;
+  font-size: 16px;
   font-weight: 500;
-  background-color: transparent;
-  color: crimson;
+  text-transform: capitalize;
+}
+
+td a {
+  margin: 0 5px;
   cursor: pointer;
+}
+
+.fa-trash-alt {
+  color: crimson;
+}
+
+.fa-pencil-alt {
+  color: rgb(61, 61, 218);
+}
+
+
+@media (max-width: 760px) {
+  table {
+    width: 100%;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  tbody tr {
+    margin-bottom: .9rem;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+
+  td,
+  th {
+    text-align: left;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding-left: 35%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 70px;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-column);
+    color: rgb(94, 94, 94);
+  }
 }
 
 
