@@ -1,19 +1,33 @@
-<h1 align="center">MERN 👉🏻 CRUD APP</h1>
+<h2 align="center">MERN 👉🏻 CRUD Application</h2>
 
-
-<p></p>
-**Features**
+**MERN**
 ```
-1.Testimonial Slide
-2.Hamburger Animation
-3.Creative Design
-4.Responsive Design
+M -> Mongodb
+E -> Express
+R -> React
+N -> Node
 ```
 
+**CRUD**
+```
+C -> Create
+R -> Read
+U -> Update/Edit
+D -> Delete
+```
 
+I complete create CRUD application. If you have interset in this project. you can download it, if download this project and extract the files, open any code editor.
+Open the file path in terminal run this command.
 
-![PHOTO](https://github.com/vishwanath231/Business-website/blob/Master/assets/img/ui.jpeg?raw=true)
+```
+npm install
+```
 
+Download tha all the packages, open package.json file check package are downloaded, Now project is ready.
+Run this command
 
-<hr>
-<p align="center">Thanks for coming, Keep coming ❤️.</p
+```
+npm run dev
+```
+
+<p align="center">Thanks for coming, Keep coming ❤️.</p>
